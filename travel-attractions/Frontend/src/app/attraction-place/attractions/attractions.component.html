@@ -1,0 +1,172 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div  class="main-title-page">
+          <div>
+            <h3>{{attractions.title}}</h3>
+          </div>
+          <div class="rating_and_popularity">
+            <span class="header_rating">
+              <div class="rs rating">
+                <div class="bubble_rating">
+                  <span class=".ui_bubble_rating"></span>
+                </div>
+                <a href="rating">597 reviews
+                  <span property="count" class="count"></span>
+                </a>
+              </div>
+            </span>
+            <span class="ratting">
+              <div>
+                <span>
+                  <b>#1</b>of 200
+                </span>
+              </div>
+            </span>
+          </div>
+          <div>
+            <div class="attraction-info">
+              <div class="address">
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span class="street-address">{{attractions.placeAddress}}</span>
+              </div>
+              <div class="phone">
+                <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <span>{{attractions.contact}}</span>
+              </div>
+              <div class="website">
+                <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                <span><a routerLink="">{{attractions.website}}</a></span>
+              </div>
+              <div class="email">
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span>{{attractions.email}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-page">
+          <div class="col-lg-3 main-page-border">
+            <div class="highlight-container">
+              <h3>Review Highlights </h3>
+              <div></div>
+            </div>
+          </div>
+          <div class="col-lg-7 top-main-image">
+            <div class="image">
+              <img src="assets/pexels-photo-459057.jpeg">
+            </div>
+          </div>
+          <div class="col-lg-2 top-sub-image">
+            <div class="image">
+              <img src="assets/pexels-photo-104750.jpeg">
+            </div>
+            <div class="image">
+              <img src="assets/pexels-photo-335966.jpeg">
+            </div>
+            <div class="image">
+              <img src="assets/pexels-photo-459057.jpeg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="boreder-bottom">
+          <ul class="main-page-header">
+            <li><a routerLink="/about-main-page">About</a></li>
+            <li><a routerLink="">Overview</a></li>
+            <li><a routerLink="">Reviews</a></li>
+            <li><a routerLink="">Location</a></li>
+            <li><a routerLink="">Q&A</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-12 about-main">
+        <div>
+          <div class="boreder-bottom">
+            <h3>About</h3>
+          </div>
+          <div>
+            <p>{{attractions.shortDescription}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 overview-main-class">
+        <div  class="boreder-bottom">
+          <h3>Overview</h3>
+        </div>
+        <p>Testing</p>
+        <div class="col-lg-4 overview-sub-class border-right">
+          <p>Rating</p>
+        </div>
+        <div class="col-lg-4 overview-sub-class border-right">
+          <div>
+            <p>LOCATION</p>
+            <div class="address">
+              <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+              <span class="street-address">{{attractions.placeAddress}}</span>
+            </div>
+          </div><hr>
+          <div>
+            <p>CONTACT</p>
+            <div class="website">
+              <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+              <span><a routerLink="">{{attractions.websiteLink}}</a></span>
+            </div>
+            <div class="email">
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <span>{{attractions.email}}</span>
+            </div>
+            <div class="phone">
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+              <span>{{attractions.contact}}</span>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-lg-4 overview-sub-class">-->
+          <!--<agm-map [latitude]="lat" [longitude]="log">-->
+            <!--<agm-direction [origin]="origin" [destination]="destination">-->
+              <!--<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>-->
+            <!--</agm-direction>-->
+          <!--</agm-map>-->
+        <!--</div>-->
+      </div>
+      <div class="col-lg-12">
+        <div  class="boreder-bottom rating-review-width">
+          <h3>Rating & Reviews</h3>
+          <button class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
+            <a [routerLink]="['/comments', attractions._id]">Write Review</a>
+          </button>
+        </div>
+        <div>
+          <p>
+            Suryanarayana Temple is located in Domlur on old airport road in the heart of the city. Dedicated to the Sun God, it is one of the most prominent temples in the world dedicated to Lord Suryanarayana.
+            Built in typical Chola architecture in granite with a huge tower covered with various colourful figures, the Suryanarayana Temple was built by Shri Patel D. R. Krishna Reddy in 1995.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div  class="boreder-bottom">
+          <h3>Location</h3>
+        </div>
+        <div>
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div  class="boreder-bottom">
+          <h3>Q&A</h3>
+        </div>
+        <div>
+          <p>
+            Suryanarayana Temple is located in Domlur on old airport road in the heart of the city. Dedicated to the Sun God, it is one of the most prominent temples in the world dedicated to Lord Suryanarayana.
+            Built in typical Chola architecture in granite with a huge tower covered with various colourful figures, the Suryanarayana Temple was built by Shri Patel D. R. Krishna Reddy in 1995.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

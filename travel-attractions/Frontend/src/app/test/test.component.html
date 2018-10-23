@@ -1,0 +1,16 @@
+<h1>Search</h1>
+
+<input type="text" [(ngModel)]="filters.title" (keydown)="search($event)" placeholder="search.......">
+
+<div  *ngFor="let results of  attraction.result">
+    <h4>{{results?.title}}</h4>
+    <p>{{results?.description}}</p>
+   
+</div>
+
+<div *ngIf="results?.length < 1 ">
+    <hr>
+    <p>
+    Not Found
+    </p>
+</div>

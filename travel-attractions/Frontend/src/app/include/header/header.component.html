@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <div class="container">
+    <a routerLink="/" class="header-logo navbar-brand">
+      <img src="assets\new-header-logo.png">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+        aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse show" id="basicExampleNav" aria-expanded="true">
+        <ul class="navbar-nav marging-right">
+            <li class="nav-item">
+                <a routerLink="/" class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/attraction-details" class="nav-link" href="#">Attraction</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/about" class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <div class="search-btn">
+                <mat-form-field class="">
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search..">
+                </mat-form-field>
+            </div>
+        </form>
+        <div class="col-4 header-login">
+            <a  routerLink="/login">LOGIN</a>
+        </div>
+    </div>
+</div>
+  </nav>

@@ -1,0 +1,92 @@
+.footer-main{
+  height: auto;
+  position: relative;
+  padding: 20px 0;
+  background-color: #34393d;
+  color: #ffffff;
+}
+.footer-info-height{
+  height: 230px;
+}
+.footer-styles{
+  text-align: center;
+}
+.footer-styles p{
+
+  font-size: 14px;
+}
+ul{
+  display: flex;
+  list-style: none;
+}
+.footer-media{
+  padding-left: 0px;
+}
+.footer-media li a{
+  color: #ced4da;
+}
+.footer-media li{
+  padding-right: 13px;
+}
+.footer-media li a i{
+  font-size: 26px;
+}
+ul{
+  padding-left: 0px;
+}
+.footer-Info{
+  display: block;
+  padding-left: 10px;
+}
+.footer-Info li a{
+  color: #888d94;
+}
+.footer-main .footer-title-style{
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer-sub-styles{
+  float: left;
+}
+.mod_table td{
+  padding-right: 15px;
+  color: #888d94;
+}
+hr{
+  border-top: 1px solid #e9ecef;
+  opacity: 0.2;
+}
+.foorter-email-input{
+  width: 370px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer-send-btn{
+  width: 75px;
+  height: 40px;
+  background: #dae5e4;
+}
+.openin-hours{
+  font-size: 18px;
+  color: #888d94;
+  font-weight: bold;
+}
+.footer-term{
+  margin-top: 25px;
+}
+.footer-term a{
+  color: #888d94;
+}
+.footer-title-style p,.subscribe-title, .let-connect-title{
+  color: #9BADA9;
+}
+.mail-footer-info-title{
+  height: 20px;
+  text-transform: uppercase;
+}
+.mail-footer-info-title ul li a{
+  padding-right: 50px;
+  color: #888d94;
+}

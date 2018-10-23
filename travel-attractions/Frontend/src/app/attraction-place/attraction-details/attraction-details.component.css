@@ -1,0 +1,44 @@
+.attraction-title{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(108, 113, 160);
+}
+.button-row{
+  float: right;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.button-row button{
+  width: 180px;
+  height: 39px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+.button-row button .mat-icon{
+  float: left;
+}
+/* Structure */
+table {
+  width: 100%;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+tbody tr td :nth-child(1){
+  width: 50px;
+}
+tbody tr td :nth-child(2), tbody tr td :nth-child(3){
+  width: 180px;
+}
+tbody tr td :nth-child(4){
+  width: 190px;
+}
+tbody tr td :nth-child(5){
+  width: 350px;
+}
+tbody tr td :nth-child(6){
+  width: 100px;
+}

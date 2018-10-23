@@ -1,0 +1,16 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.cancel-btn, .submit-btn{
+  width: 130px;
+  font-weight: bold !important;
+}
+.attraction-btn-style{
+  margin-top: 15px;
+  margin-bottom: 25px;
+}

@@ -1,0 +1,44 @@
+<div>
+  <div class="container">
+    <div class="jumbotron review-component">
+      <div class="col-12">
+        <div class="review-component-styles">
+          <div class="review-title">
+            <h1>Rate and Review</h1>
+          </div>
+          <div class="review-form-style">
+            <form class="form-group input-group" [formGroup]="commentFormDetails">
+              <mat-form-field class="full-width col-12" hidden>
+                <input matInput type="text" formControlName="review_id" [(ngModel)]="attractions._id" required>
+              </mat-form-field>
+              <!--<mat-form-field class="full-width col-12">-->
+              <!--<input matInput type="number" formControlName="rating" placeholder="Please enter your Rating" required>-->
+              <!--</mat-form-field>-->
+              <mat-form-field class="full-width col-12">
+                <input matInput type="text" formControlName="reviewTitle" placeholder="Title" required>
+              </mat-form-field>
+              <mat-form-field class="full-width col-12">
+                <textarea matInput type="text" formControlName="reviewDescription" placeholder="Please enter your comment..."></textarea>
+              </mat-form-field>
+              <!--<label class="full-width col-12">Visited Sort</label>-->
+              <!--<mat-radio-group class="full-width col-12 mat-radio-button" [(ngModel)]="favoritePlace">-->
+              <!--<mat-radio-button class="example-rad" *ngFor="let visitor of visitedSort" [value]="visitor">-->
+              <!--{{visitor}}-->
+              <!--</mat-radio-button>-->
+              <!--</mat-radio-group>-->
+              <div class="overall-rating-style">
+                <label>Your overall rating of this Place</label><br/>
+                <app-star-rating></app-star-rating><br/>
+              </div>
+              <div class="model-btn-style">
+                <button type="button" class="btn btn-default cancel-btn" routerLink="/">CANCEL</button>
+                <button (click)="userComment()" type="submit" value="post" name="post" class="btn post-btn">Post</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

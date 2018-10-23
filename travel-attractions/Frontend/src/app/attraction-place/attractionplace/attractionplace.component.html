@@ -1,0 +1,103 @@
+<div class="example-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">User Register</h2>
+                <form [formGroup]="attractionFormDetails">
+                    <mat-form-field class="full-width col-12">
+                        <input type="text" matInput placeholder="Title" formControlName="title" required>
+                        <mat-error *ngFor="let validation of validation_messages.title">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('title').hasError(validation.type) && (attractionFormDetails.get('title').dirty || attractionFormDetails.get('title').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="full-width col-12">
+                        <input type="text" matInput placeholder="Place Name" formControlName="placeName" required>
+                        <mat-error *ngFor="let validation of validation_messages.placeName">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('placeName').hasError(validation.type) && (attractionFormDetails.get('placeName').dirty || attractionFormDetails.get('placeName').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field> 
+                    <mat-form-field class="full-width col-12">
+                        <input type="text" matInput placeholder="Place Addresss" formControlName="placeAddress" required>
+                        <mat-error *ngFor="let validation of validation_messages.placeAddress">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('placeAddress').hasError(validation.type) && (attractionFormDetails.get('placeAddress').dirty || attractionFormDetails.get('placeAddress').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="full-width col-12">
+                        <textarea matInput placeholder="Short Description" formControlName="shortDescription" required></textarea>
+                        <mat-error *ngFor="let validation of validation_messages.shortDescription">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('shortDescription').hasError(validation.type) && (attractionFormDetails.get('shortDescription').dirty || attractionFormDetails.get('shortDescription').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>  
+                    <mat-form-field class="full-width col-12">
+                        <textarea matInput placeholder="Long Description" formControlName="longDescription" required></textarea>
+                        <mat-error *ngFor="let validation of validation_messages.longDescription">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('longDescription').hasError(validation.type) && (attractionFormDetails.get('longDescription').dirty || attractionFormDetails.get('longDescription').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>  
+                    <mat-form-field class="full-width col-6">
+                        <input type="text" matInput placeholder="Latitude" formControlName="latitude" required>
+                        <mat-error *ngFor="let validation of validation_messages.latitude">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('latitude').hasError(validation.type) && (attractionFormDetails.get('latitude').dirty || attractionFormDetails.get('latitude').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>  
+                    <mat-form-field class="full-width col-6">
+                        <input type="text" matInput placeholder="Longitude" formControlName="longitude" required>
+                        <mat-error *ngFor="let validation of validation_messages.longitude">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('longitude').hasError(validation.type) && (attractionFormDetails.get('longitude').dirty || attractionFormDetails.get('longitude').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field> 
+                    <mat-form-field class="full-width col-12">
+                        <input type="url" matInput placeholder="Web site" formControlName="website" required>
+                        <mat-icon matSuffix>language</mat-icon>
+                        <mat-error *ngFor="let validation of validation_messages.website">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('website').hasError(validation.type) && (attractionFormDetails.get('website').dirty || attractionFormDetails.get('website').touched)">
+                                    {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>  
+                    <mat-form-field class="full-width col-4">
+                        <input type="tel" matInput placeholder="Contact" formControlName="contact" required>
+                        <mat-icon matSuffix>phone</mat-icon>
+                        <mat-hint>Include area code</mat-hint>
+                        <mat-error *ngFor="let validation of validation_messages.contact">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('contact').hasError(validation.type) && (attractionFormDetails.get('contact').dirty || attractionFormDetails.get('contact').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field> 
+                    <mat-form-field class="full-width col-8">
+                        <input type="email" matInput placeholder="Email" formControlName="email" required>
+                        <mat-icon matSuffix>email</mat-icon>
+                        <mat-error *ngFor="let validation of validation_messages.email">
+                            <mat-error class="error-message" *ngIf="attractionFormDetails.get('email').hasError(validation.type) && (attractionFormDetails.get('email').dirty || attractionFormDetails.get('email').touched)">
+                                {{validation.message}}
+                            </mat-error>
+                        </mat-error>
+                    </mat-form-field>   
+                    <div class="attraction-btn-style">
+                        <button type="button" class="btn btn-default cancel-btn" routerLink="/attraction-details">CANCEL
+                        </button>
+                        <button class="submit-btn rounded" 
+                            color="primary" mat-raised-button type="submit" 
+                            (click)="attractionPlace()">INSERT
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

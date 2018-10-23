@@ -1,0 +1,21 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="col-4 float-left" *ngFor="let result of attractions">
+          <div class="main-title-page">
+            <a [routerLink]="['/attraction', result._id]">
+              <div>
+                <div class="image">
+                  <img src="assets/pexels-photo-104750.jpeg" style="width: 100%" height="100%;">
+                </div>
+                <h5 class="heading_title">{{result.title | json }}</h5>
+                <p>{{result.shortDescription | json }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

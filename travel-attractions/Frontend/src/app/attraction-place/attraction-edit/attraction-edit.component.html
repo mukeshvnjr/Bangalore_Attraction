@@ -1,0 +1,54 @@
+<div class="background-image">
+    <div class="container"> 
+        <div class="jumbotron register-component">
+            <div class="col-lg-12">
+                <div class="register-component-styles">
+                    <div class="text-center">
+                        <h1 class="register-title">Edit Attractions</h1>
+                    </div>
+                    <div class="text-center register-form-style">
+                        <form (ngSubmit)="updateAttraction(attractions._id)" #attractionForm="ngForm" class="form-group input-group">
+
+                          <div class="form-group input-group">
+                              <label for="title" class="control-label">Attraction Title</label>
+                              <input type="text" name="title" [(ngModel)]="attractions.title" class="form-control border-rdius" required>
+                          </div>
+
+                          <div class="form-group input-group">
+                              <label for="placeName">Place Name</label>
+                              <input type="text" name="placeName" [(ngModel)]="attractions.placeName" class="form-control border-rdius"  required>
+                          </div>
+
+                          <div class="form-group input-group">
+                            <label for="placeAddress">Place Address</label>
+                            <input type="text" name="placeAddress" [(ngModel)]="attractions.placeAddress" class="form-control border-rdius" required>
+                          </div>
+
+                          <div class="form-group input-group">
+                              <label for="description">Description</label>
+                              <textarea type="text" name="description" [(ngModel)]="attractions.shortDescription" class="form-control border-rdius" required></textarea>
+                          </div>
+
+                          <div class="form-group input-group">
+                              <label for="websiteLink">Web site</label>
+                              <input type="websiteLink" name="contact" [(ngModel)]="attractions.website" class="form-control border-rdius" required>
+                          </div>
+                          <div class="form-group input-group">
+                              <label for="contact">Contact</label>
+                              <input type="text" name="contact" [(ngModel)]="attractions.contact" class="form-control border-rdius" required>
+                          </div>
+                          <div class="form-group input-group">
+                              <label for="email">Email</label>
+                              <input type="text" name="email" [(ngModel)]="attractions.email" class="form-control border-rdius" required>
+                          </div>         
+                          <div class="form-group input-group btn-styles">
+                            <button type="button" class="btn btn-default cancel-btn" routerLink="/attraction-details">CANCEL</button>
+                            <button type="submit" class="btn btn-success register-btn">Update</button>
+                          </div>
+                        </form>                                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

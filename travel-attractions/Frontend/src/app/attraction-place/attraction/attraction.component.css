@@ -1,0 +1,107 @@
+.header_rating .bubble_rating {
+  padding-right: 4px;
+}
+.ui_bubble_rating{
+  display: inline-block;
+  position: relative;
+}
+.ui_bubble_rating:before, .ui_bubble_rating:after {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: inherit;
+  line-height: 1;
+  font-family: "TripAdvisor_Regular"!important;
+  -ms-transform: rotate(-0.001deg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
+.ui_bubble_rating:before {
+  color: #fff;
+  display: block;
+  content: "\e00a\e00a\e00a\e00a\e00a";
+}
+.ui_bubble_rating.bubble_45:after {
+  content: "\e00b\e00b\e00b\e00b\e00c";
+}
+.header_rating .more {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.header_rating{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-right: 20px;
+  line-height: 24px;
+  padding-right: 25px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  float: left;
+}
+.address, .email, .phone, .website{
+  width: auto;
+  padding-right: 15px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+.ratting{
+  display: inline-block;
+}
+.attraction-info{
+  display: inline-flex;
+}
+.address span, .email span, .phone span, .website span{
+  padding-right: 5px;
+}
+.highlightContainer{
+  height: 422px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+.highlightContainer h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 20px;
+  display: inline-block;
+  width: 100%;
+}
+.main-page{
+  display: flex;
+  height: 380px;
+  margin-bottom: 50px;
+}
+.top-main-image .image img{
+  width: 100%;
+  height: 380px;
+}
+.top-sub-image .image img{
+  width: 100%;
+  padding-bottom: 15px;
+  height: 131.5px;
+}
+.main-title-page{
+  margin-bottom: 20px;
+}
+.main-page-border{
+  border: 1px solid #e5e5e5;
+}
+.about-main{
+  margin-bottom: 15px;
+}
+.main-page-header{
+  display: flex;
+  padding-left: 0px;
+  margin-bottom: 40px;
+}
+.main-page-header li{
+  padding-right: 20px;
+}
+.boreder-top{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.boreder-bottom{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

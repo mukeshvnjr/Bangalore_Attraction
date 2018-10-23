@@ -1,0 +1,159 @@
+<div class="background-color">
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-2">
+            <div class="user-details-container">
+                <img class="user-image" src="https://randomuser.me/api/portraits/lego/3.jpg"/>
+                <span class="user-title"></span>
+                <p class="user-bio"></p>
+            </div>
+        </div> -->
+        <div class="col-12">
+            <h2 class="section-title">User Register</h2>
+            <form [formGroup]="userDetailsForm">
+                <mat-form-field class="full-width col-6">
+                    <input matInput placeholder="First Name" formControlName="firstName" required>
+                    <mat-error *ngFor="let validation of validation_messages.firstName">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('firstName').hasError(validation.type) &&                       (userDetailsForm.get('firstName').dirty || userDetailsForm.get('firstName').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-6">
+                    <input type="text" matInput placeholder="Last Name" formControlName="lastName" required>
+                    <mat-error *ngFor="let validation of validation_messages.lastName">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('lastName').hasError(validation.type) &&                       (userDetailsForm.get('lastName').dirty || userDetailsForm.get('lastName').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-12">
+                    <input type="email" matInput placeholder="Email" formControlName="email" required>
+                    <mat-error *ngFor="let validation of validation_messages.email">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('email').hasError(validation.type) &&                       (userDetailsForm.get('email').dirty || userDetailsForm.get('email').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>    
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-12">
+                    <input [type]="hide ? 'text' : 'password'" matInput placeholder="Password" formControlName="password" required>
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error *ngFor="let validation of validation_messages.password">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('password').hasError(validation.type) && (userDetailsForm.get('password').dirty || userDetailsForm.get('password').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>    
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-12">
+                    <input  [type]="hide ? 'text' : 'password'" matInput placeholder="Confirm Password" formControlName="cpassword" required 
+                    [errorStateMatcher]="parentErrorStateMatcher">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error *ngFor="let validation of validation_messages.cpassword">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('cpassword').hasError(validation.type) && (userDetailsForm.get('cpassword').dirty || 
+                         userDetailsForm.get('cpassword').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error>    
+                </mat-form-field>
+            
+
+
+                <mat-form-field class="full-width col-12">
+                    <input type="tel" matInput placeholder="Mobile" formControlName="mobile" required>
+                    <mat-error *ngFor="let validation of validation_messages.mobile">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('mobile').hasError(validation.type) &&                       (userDetailsForm.get('mobile').dirty || userDetailsForm.get('mobile').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-12">
+                    <input type="text" matInput placeholder="Address" formControlName="address" required>
+                    <mat-error *ngFor="let validation of validation_messages.address">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('address').hasError(validation.type) &&                       (userDetailsForm.get('address').dirty || userDetailsForm.get('address').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field>
+
+                <mat-form-field class="full-width col-12">
+                    <input type="text" matInput placeholder="Address1">
+                </mat-form-field>    
+                
+                <mat-form-field class="full-width col-4">
+                    <input type="text" matInput placeholder="Street" formControlName="street" required>
+                    <mat-error *ngFor="let validation of validation_messages.street">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('street').hasError(validation.type) &&                       (userDetailsForm.get('street').dirty || userDetailsForm.get('street').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field>  
+                
+                <mat-form-field class="full-width col-4">
+                    <input type="text" matInput placeholder="City" formControlName="city" required>
+                    <mat-error *ngFor="let validation of validation_messages.city">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('city').hasError(validation.type) &&                       (userDetailsForm.get('city').dirty || userDetailsForm.get('city').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field>  
+               
+                <mat-form-field class="full-width col-4">
+                    <input type="text" matInput placeholder="State" formControlName="state" required>
+                    <mat-error *ngFor="let validation of validation_messages.state">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('state').hasError(validation.type) &&                       (userDetailsForm.get('state').dirty || userDetailsForm.get('state').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field>  
+                
+                <mat-form-field class="full-width col-6">
+                    <!-- <mat-select formControlName="country" placeholder="Country" [(value)]="selected">
+                        <mat-option>India</mat-option>
+                    </mat-select>             -->
+                    <input type="text" formControlName="country" matInput placeholder="Country" required>
+                    <mat-error *ngFor="let validation of validation_messages.country">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('country').hasError(validation.type) &&                       (userDetailsForm.get('country').dirty || userDetailsForm.get('country').touched)">
+                                {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field> 
+
+                <mat-form-field class="full-width col-6">
+                    <input type="text" matInput placeholder="Zip Code" formControlName="zipCode" required>
+                    <mat-error *ngFor="let validation of validation_messages.zipCode">
+                        <mat-error class="error-message" *ngIf="userDetailsForm.get('zipCode').hasError(validation.type) &&                       (userDetailsForm.get('zipCode').dirty || userDetailsForm.get('zipCode').touched)">
+                            {{validation.message}}
+                        </mat-error>
+                    </mat-error> 
+                </mat-form-field> 
+
+                <mat-checkbox formControlName="mailPrederence" class="full-width col-12">
+                    Mailing Preference
+                </mat-checkbox>
+                <mat-error *ngFor="let validation of validation_messages.mailPrederence">
+                    <mat-error class="error-message" *ngIf="userDetailsForm.get('mailPrederence').hasError(validation.type) && (userDetailsForm.get('mailPrederence').dirty || userDetailsForm.get('mailPrederence').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+
+                <mat-checkbox formControlName="terms" class="full-width col-12">
+                    I accept terms and conditions
+                </mat-checkbox>
+                <mat-error *ngFor="let validation of validation_messages.terms">
+                    <mat-error class="error-message" *ngIf="userDetailsForm.get('terms').hasError(validation.type) && (userDetailsForm.get('terms').dirty || userDetailsForm.get('terms').touched)">{{validation.message}}</mat-error>
+                </mat-error>
+
+                <button class="submit-btn rounded" color="primary" mat-raised-button type="submit" (click)="onSubmitUserDetails()">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <div class="col-12 register-footer">
+                <p>I'm already Registerd! Click here to <a routerLink="/login">Login</a></p>
+         </div>
+    </div>
+</div>
+</div>
